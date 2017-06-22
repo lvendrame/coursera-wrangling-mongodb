@@ -23,8 +23,8 @@ def parse_file(datafile):
             if headers is not None :
                 v_line = line.strip().split(',')
                 tmpObj = {}
-                for i in range(len(headers)):
-                    tmpObj[headers[i].strip()] = v_line[i].strip()
+                for i, caption in enumerate(headers):
+                    tmpObj[caption.strip()] = v_line[i].strip()
                     
                 data.append(tmpObj)
             else:
